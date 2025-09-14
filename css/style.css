@@ -9710,17 +9710,4 @@ html, body {
   overflow-x: hidden;
 }
 
-.container, .row {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.owl-carousel, .owl-stage-outer, .owl-stage, .slider-item {
-  overflow-x: hidden;
-}
-
-.img {
-  background-size: cover;
-  background-position: center;
-}
 
