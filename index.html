@@ -51,12 +51,18 @@
 			/* background-color: #cde1f8; */
 			margin: .5rem 0 1.2rem 0;
 			border-radius: 0;
-			height: .7rem;
+			height: 1.5rem;
 		}
 
 		.skill-mf .progress .progress-bar {
-			height: .7rem;
+			height: 1.5rem;
 			background-color: #ffbd39;
+			transition: width 1.5s ease-in-out;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			padding-left: 10px;
+			font-weight: bold;
 		}
 
 
@@ -241,20 +247,18 @@
 									</div>
 								</div>
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span><i class="devicon-mysql-plain colored"></i> SQL</span> <span
-										class="pull-right">95%</span>
+								<div class="skill-mf pt-4">
+
+									<span><i class="devicon-mysql-plain colored"></i> SQL</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;"
-											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar" role="progressbar" style="width: 0%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
 									</div>
 
-									<span><i class="devicon-python-plain colored"></i> Python</span> <span
-										class="pull-right">85%</span>
+									<span><i class="devicon-python-plain colored"></i> Python</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%"
-											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
 									</div>
 
 									<span><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -262,24 +266,22 @@
 											<title>Power BI</title>
 											<path
 												d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z" />
-										</svg> Data Visualisation</span> <span class="pull-right">90%</span>
+										</svg> Data Visualisation</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%"
-											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
 									</div>
 
 									<span><i class="devicon-rstudio-plain colored"></i> Statistical Analysis</span>
-									<span class="pull-right">85%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%"
-											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
 									</div>
 
 									<span><i class="devicon-tensorflow-original colored"></i> Machine Learning</span>
-									<span class="pull-right">80%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%"
-											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
 									</div>
 								</div>
 							</div>
@@ -293,12 +295,12 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 
-								<p>Motivated and adaptable professional with excellent communication skills, seeking a
-									challenging opportunity to apply and
-									enhance expertise in Python, SQL, Power BI, and Microsoft Excel. Committed to
-									driving organizational growth and
-									productivity through continuous learning, problem-solving, and delivering impactful
-									results across diverse roles.
+								<p>Results-driven Data Analyst skilled in converting raw datasets into actionable
+									business insights. Hands-on experience with
+									SQL, Python, and Power BI for data cleaning, Exploratory Data Analysis (EDA), KPI
+									reporting, dashboard automation,
+									and forecasting. Proven ability to identify trends, optimize reporting workflows,
+									and support data-driven decision-making.
 								</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 
@@ -315,7 +317,7 @@
 										<span>PySpark, Spark SQL, Apache Hive, Hadoop</span>
 									</li>
 									<li class="d-flex"><span>Tools & Platforms:</span>
-										<span>Power BI, Excel, PostgreSQL, Linux, AWS</span>
+										<span>Power BI, Excel, Tableau, PostgreSQL, Linux, AWS</span>
 									</li>
 									<li class="d-flex"><span>Interest:</span>
 										<span>Traveling, Singing, Culinary Arts</span>
@@ -559,7 +561,10 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="900">0</strong>
+							<div class="d-flex justify-content-center align-items-center">
+								<strong class="number" data-number="900">0</strong><span
+									style="color: #ffbd39; margin-left: 5px; font-weight: 700;">+</span>
+							</div>
 							<span>Learning Hours</span>
 						</div>
 					</div>
@@ -567,7 +572,10 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="500">0</strong>
+							<div class="d-flex justify-content-center align-items-center">
+								<strong class="number" data-number="500">0</strong><span
+									style="color: #ffbd39; margin-left: 5px; font-weight: 700;">+</span>
+							</div>
 							<span>Cups of coffee</span>
 						</div>
 					</div>

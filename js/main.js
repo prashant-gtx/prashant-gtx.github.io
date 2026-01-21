@@ -273,5 +273,21 @@
 
 
 
+	// skills animation
+	var skillsAnimation = function() {
+		if ($('.skill-mf').length > 0 ) {
+			$('.skill-mf').waypoint( function( direction ) {
+				if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+					$(this.element).addClass('ftco-animated');
+					$('.progress-bar').each(function(){
+						var width = $(this).attr('aria-valuenow');
+						$(this).css('width', width + '%');
+					});
+				}
+			} , { offset: '95%' } );
+		}
+	};
+	skillsAnimation();
+
 })(jQuery);
 
