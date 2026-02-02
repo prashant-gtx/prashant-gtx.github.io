@@ -2,63 +2,99 @@
 **Aspiring Data Analyst**
 
 📍 Navi Mumbai, India  
-📧 prashantgupta8813@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com)  
+📧 prashantgtx@gmail.com  
+Portfolio: [prashant-gtx.github.io](https://prashant-gtx.github.io/)  
+🔗 [LinkedIn](https://www.linkedin.com/in/prashant-gtx/) • [GitHub](https://github.com/prashant-gtx)
 
 ---
 
 ## About Me  
-Motivated and adaptable professional with excellent communication skills, seeking a challenging opportunity to apply and enhance expertise in Python, SQL, Power BI, and Microsoft Excel. Committed to driving organizational growth and productivity through continuous learning, problem-solving, and delivering impactful results across diverse roles.
-
-**Domain:** Data Science & Analytics  
-**Education:** Bachelor of Engineering – Computer Engineering  
-**Languages:** English, Hindi, Marathi  
-**BI Tools:** Microsoft Power BI, Looker & Tableau  
-**Other Skills:** Excel, MySQL, PostgreSQL, Hadoop, Spark, Linux, AWS, Java  
-**Interests:** Traveling, Singing, Culinary Arts  
+Results-driven Data Analyst skilled in converting raw datasets into actionable business insights. Hands-on experience with SQL, Python, and Power BI for data cleaning, Exploratory Data Analysis (EDA), KPI reporting, dashboard automation, and forecasting. Proven ability to identify trends, optimize reporting workflows, and support data-driven decision-making.
 
 ---
 
 ## Skills  
-- Python (85%)  
-- SQL (95%)  
-- Data Visualization (90%)  
-- Statistical Analysis (85%)  
-- Machine Learning (80%)  
 
----
+### Programming & Databases
+- **Python**: NumPy, Pandas, Matplotlib, Seaborn, BeautifulSoup, Regex (re)
+- **SQL**: Joins, CTEs, Window Functions
+- **PostgreSQL**
 
-## Education  
-- **PG-Diploma in Big Data Analytics** (Ongoing) – C-DAC, Mumbai  
-- **Bachelor of Engineering** – SIES Graduate School of Technology (2021-2025) – CGPA: 7.51  
-- **Class XII** – DAV Public School, Nerul (2020-2021) – Grade: 84%  
-- **Class X** – DAV Public School, Nerul (2018-2019) – Grade: 90.40%  
+### Data Analysis & Visualization
+- **Power BI**, **Excel**, **Tableau**, **DAX**
+- Data Visualization & Dashboarding
+
+### Big Data & Cloud
+- **Big Data**: PySpark, SparkSQL, Apache Hive, Hadoop
+- **Cloud/OS**: AWS, Linux
 
 ---
 
 ## Projects  
-Below are some of the key Analytics/Data Science projects I’ve worked on:  
-- **SuperStore Sales Analysis and Forecasting** – Built an interactive Power BI dashboard for Superstore sales featuring regional KPIs, product trends and 15-day sales forecasting.  
-- **E-Commerce Sales Dashboard** – Created a dynamic Power BI dashboard to visualize e-commerce sales, profits and product trends by state, category and payment modes.  
-- **HR Analytics Dashboard** – Developed an HR analytics dashboard in Power BI to track employee attrition, salary distribution, and demographic insights.  
-- **Knee Osteoarthritis Detection** – Developed an automated diagnostic system using deep-learning (KL grades 0-4) from X-ray images, then integrated into a Streamlit web-app with Grad-CAM for visual explanations.  
-- **Hospital Management System** – Built using Python & MySQL to handle patient data, admissions and billing — strengthened backend development skills through CRUD operations & database integration.  
 
-*More projects can be found on my GitHub.*
+### MarketPulseAI | [GitHub](https://github.com/prashant-gtx)
+- Developed a real-time financial intelligence platform with a **FastAPI** backend to aggregate financial news, market data, and analytics.
+- Engineered an **Agentic Retrieval-Augmented Generation (RAG)** pipeline using **ChromaDB** and **Llama 3.2**, featuring a self-healing mechanism that refreshes stale context from Yahoo Finance.
+- Designed a privacy-first AI workflow by running local LLMs (**Ollama**) for offline news summarization and integrated **FinBERT** for real-time sentiment analysis.
+- Built a scalable data ingestion system using concurrent background scrapers and an **APScheduler**-driven alert engine.
+
+### Detecting Early Stage Knee Osteoarthritis Using Deep Transfer Learning | [GitHub](https://github.com/prashant-gtx)
+- Built a deep learning pipeline to classify knee X-ray images into five severity grades (0-4), enabling early detection of osteoarthritis.
+- Leveraged transfer learning by fine-tuning **ResNet** and **VGG** architectures.
+- Addressed class imbalance using selective augmentation and iterative model refinement.
+- Built an interactive **Streamlit** web application for uploading X-rays and viewing diagnostic reports.
+
+### Consumer Lending Risk Insights Through Data Analytics | [GitHub](https://github.com/prashant-gtx)
+- Analyzed consumer loan application and historical repayment data to identify key factors influencing loan default risk.
+- Performed EDA and feature engineering to distinguish defaulters from non-defaulters.
+- Conducted statistical hypothesis testing to validate risk drivers such as age, income, and debt-to-income ratio (DTI).
+- Translated analytical findings into actionable credit policy recommendations.
 
 ---
 
-## Certifications & Learning  
-- Google/Coursera in Cybersecurity  
-- CTF Challenge by RedFox  
-- Currently advancing skills in: Penetration Testing, Vulnerability Assessment, Python, Linux  
+## Education  
+
+- **PG Diploma in Big Data Analytics**  
+  *Centre for Development of Advanced Computing (C-DAC), Mumbai* | Aug 2025 - Feb 2026  
+  **Score**: 80.63%
+
+- **Bachelor of Engineering – Computer Engineering**  
+  *SIES Graduate School of Technology* | Dec 2021 - May 2025  
+  **CGPA**: 7.51
+
+- **Class XII (CBSE)**  
+  *DAV Public School, Nerul* | May 2020 - May 2021  
+  **Score**: 84%
+
+- **Class X (CBSE)**  
+  *DAV Public School, Nerul* | May 2018 - May 2019  
+  **Score**: 90.40%
+
+---
+
+## Certifications & Achievements
+- **Career Essentials in Data Analysis** – Microsoft & LinkedIn
+- **SQL (Basic, Intermediate, Advanced)** – HackerRank
+- **AWS Academy Graduate** – Data Engineering
+- **AWS Academy Graduate** – Cloud Foundations
+- **Data Engineering with Hadoop and Spark** – GeeksforGeeks
+
+---
+
+## Positions of Responsibility
+
+- **Administration Head** – IEEE SIES GST
+  - Coordinated 10+ events with cross-functional teams.
+  - Streamlined administrative processes, reducing setup time by 30%.
+- **NSS Volunteer**
+  - Contributed to multiple community programs related to cleanliness drives and awareness campaigns.
 
 ---
 
 ## Contact  
 Want to collaborate, chat about data, or explore potential opportunities?  
 Feel free to reach out!  
-📧 prashantgupta8813@gmail.com  
+📧 prashantgtx@gmail.com  
 📞 +91-9029140773  
 
 ---
