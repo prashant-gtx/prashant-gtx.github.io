@@ -2866,6 +2866,15 @@ textarea.form-control.is-invalid {
     margin-left: 0;
   }
 
+  /* Project Marquee Styles */
+  .project-item {
+    width: 320px;
+    flex-shrink: 0;
+    margin-right: 30px;
+    white-space: normal;
+    /* Allow text wrapping inside cards */
+  }
+
   .form-inline .custom-control {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -14032,7 +14041,7 @@ body {
 
 .marquee-content {
   display: flex;
-  animation: scroll 30s linear infinite;
+  animation: scroll 60s linear infinite;
   width: max-content;
   /* Ensure container fits all items */
 }
@@ -14305,4 +14314,22 @@ body {
     left: 60px;
     right: auto;
   }
+}
+
+/* Project Marquee Styles */
+.project-item {
+  width: 320px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  white-space: normal;
+  /* Allow text wrapping inside cards */
+}
+
+/* Button Zoom Effect */
+.btn-zoom {
+  transition: transform 0.3s ease;
+}
+
+.btn-zoom:hover {
+  transform: scale(1.1);
 }
