@@ -14325,6 +14325,13 @@ body {
   /* Allow text wrapping inside cards */
 }
 
+.img-container {
+  overflow: hidden;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 /* Button Zoom Effect */
 .btn-zoom {
   transition: transform 0.3s ease;
