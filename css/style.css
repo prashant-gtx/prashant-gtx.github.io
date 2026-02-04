@@ -14388,7 +14388,7 @@ body,
 .subheading-small {
   font-size: 14px;
   font-weight: 600;
-  color: #ffbd39;
+  color: #ffbd39 !important;
   /* Yellow Accent */
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -14400,11 +14400,11 @@ body,
   font-size: 60px;
   font-weight: 800;
   line-height: 1.1;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .hero-heading span {
-  color: #ffbd39;
+  color: #ffbd39 !important;
   /* Yellow Contrast */
 }
 
