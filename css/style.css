@@ -14340,3 +14340,167 @@ body {
 .btn-zoom:hover {
   transform: scale(1.1);
 }
+
+/* Animated Gradient Background for Hero Section */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.slider-item .overlay {
+  background: linear-gradient(-45deg, #020024, #090979, #00d4ff, #4b134f);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  opacity: 0.85 !important;
+  /* Override default overlay opacity */
+}
+
+
+/* =========================================
+   NEW HERO SECTION STYLES (Dark Theme - Final)
+   ========================================= */
+
+/* Dark Background Override */
+body,
+.hero-new {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+/* Hero Container */
+.hero-new {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Typography */
+.subheading-small {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffbd39;
+  /* Yellow Accent */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-heading {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero-heading span {
+  color: #ffbd39;
+  /* Yellow Contrast */
+}
+
+.hero-subheading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Buttons */
+.btn-pill {
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-yellow {
+  background-color: #ffbd39;
+  color: #000000;
+  border: 2px solid #ffbd39;
+}
+
+.btn-yellow:hover {
+  background-color: transparent;
+  color: #ffbd39;
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline-white:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Image Styling */
+.hero-img-container {
+  position: relative;
+  z-index: 10;
+  /* Ensure on top */
+}
+
+/* Radial Gradient behind image to make it pop */
+.hero-img-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(255, 189, 57, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: -1;
+}
+
+.hero-img {
+  max-width: 100%;
+  /* Increased from 85% */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Text Fade Animation Classes */
+#typing-animation {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.text-hidden {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Other Section compatibility */
+.ftco-section {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heading-section h1.big {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.heading-section h2 {
+  color: #ffffff !important;
+}

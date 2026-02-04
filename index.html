@@ -67,48 +67,24 @@
 		}
 
 
+
 		/* Animation styles */
 		#typing-animation {
-			position: relative;
 			font-size: 30px;
 			font-weight: bold;
 			color: rgb(255, 255, 255);
-			overflow: hidden;
 			white-space: nowrap;
-			animation: typing 3s steps(20, end) infinite;
+			display: inline-block;
+			opacity: 1;
+			/* Default opacity */
+			transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 		}
 
-		#typing-animation:before {
-			content: "";
-			/* position: absolute; */
-			top: 0;
-			left: 0;
-			width: 0;
-			height: 100%;
-			background-color: #ccc;
-			animation: typing-cursor 0.5s ease-in-out infinite;
+		/* Class for the hidden state (fade out) */
+		.text-hidden {
+			opacity: 0 !important;
+			transform: translateY(10px);
 		}
-
-		@keyframes typing {
-			from {
-				width: 0;
-			}
-
-			to {
-				width: 100%;
-			}
-		}
-
-		@keyframes typing-cursor {
-			from {
-				width: 5px;
-			}
-
-			to {
-				width: 0;
-			}
-		}
-
 
 		/* project image zoom effect */
 
@@ -148,73 +124,62 @@
 			</div>
 		</div>
 	</nav>
-	<section id="home-section" class="hero">
-		<div class="home-slider  owl-carousel">
-			<div class="slider-item ">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-						data-scrollax-parent="true">
-						<div class="one-third js-fullheight order-md-last img"
-							style="background-image:url(images/bg_1.png);">
-							<div class="overlay"></div>
-						</div>
-						<div class="one-forth d-flex  align-items-center ftco-animate"
-							data-scrollax=" properties: { translateY: '70%' }">
-							<div class="text">
-								<span class="subheading">Hello!</span>
-								<h1 class="mb-4 mt-3">I'm <span>Prashant Gupta</span></h1>
+	<section id="home-section" class="hero-new">
+		<div class="container">
+			<div class="row align-items-center justify-content-center" style="min-height: 100vh;">
+				<!-- Left Column: Text -->
+				<div class="col-md-5 text-left order-md-1 order-2">
+					<span class="subheading-small">HELLO!</span>
+					<h1 class="hero-heading mt-3">I'm <span>Prashant</span><br><span>Gupta</span></h1>
+					<!-- Dynamic Text Animation -->
+					<h2 class="hero-subheading mt-3">
+						<span id="typing-animation"></span>
+					</h2>
 
-								<!-- Element to contain animated typing -->
-								<span id="typing-animation"></span>
+					<script>
+						const typingAnimationElement = document.getElementById('typing-animation');
+						const typingTexts = [
+							'PG-DBDA at C-DAC Mumbai',
+							'Engineer',
+							'Data Analyst'
+						];
 
-								<script>
+						function playTypingAnimation(text) {
+							if (!typingAnimationElement) return;
 
-									// Initialize the typing animation
-									const typingAnimationElement = document.getElementById('typing-animation');
+							typingAnimationElement.textContent = text;
+							typingAnimationElement.classList.remove('text-hidden');
 
-									// Create an array of typing text
-									const typingTexts = [
-										'PG-DBDA at C-DAC Mumbai',
-										'Engineer',
-										'Data Analyst '
-									];
+							setTimeout(() => {
+								typingAnimationElement.classList.add('text-hidden');
+								setTimeout(() => {
+									playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+								}, 500); // Wait for fade out
+							}, 3000); // Display time
+						}
 
-									// Create a function to display the typing animation for a given text
-									function playTypingAnimation(text) {
-										// Loop through each character and add it to the element
-										for (let i = 0; i < text.length; i++) {
-											setTimeout(() => {
-												typingAnimationElement.textContent += text[i];
-											}, i * 175); // Increase the delay to slow down the typing animation
-										}
+						// Start animation
+						document.addEventListener('DOMContentLoaded', () => {
+							playTypingAnimation(typingTexts[0]);
+						});
+					</script>
 
-										// Once the animation is complete, reset the text and start over
-										setTimeout(() => {
-											typingAnimationElement.textContent = '';
-											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-										}, text.length * 200);
-									}
+					<div class="mt-4">
+						<!-- <h3 class="mb-4 text-white font-weight-bold">Upcoming Data Analyst</h3> -->
+						<p>
+							<a href="https://www.linkedin.com/in/prashant-gtx/" class="btn btn-pill btn-yellow mr-3"
+								target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+							<a href="#project-section" class="btn btn-pill btn-outline-white"
+								rel="noopener noreferrer">MY WORKS</a>
+						</p>
+					</div>
+				</div>
 
-									// Start the typing animation loop
-									playTypingAnimation(typingTexts[0]);
-
-								</script>
-
-								<br>
-								<br>
-								<h4>Upcoming Data Analyst</h4>
-								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-								<!-- <br> -->
-								<p><a href="https://www.linkedin.com/in/prashant-gtx/"
-										class="btn btn-primary py-3 px-4 btn-zoom" target="_blank"
-										rel="noopener noreferrer">LinkedIn</a>
-									<a href="https://github.com/prashant-gtx"
-										class="btn btn-white btn-outline-white py-3 px-4 btn-zoom" target="_blank"
-										rel="noopener noreferrer">My works</a>
-								</p>
-							</div>
-						</div>
+				<!-- Right Column: Image -->
+				<div class="col-md-7 text-center order-md-2 order-1 mb-5 mb-md-0">
+					<div class="hero-img-container">
+						<!-- Explicitly using bg_1.png which is the white shirt transparent image -->
+						<img src="images/bg_1.png" alt="Prashant Gupta" class="img-fluid hero-img">
 					</div>
 				</div>
 			</div>
@@ -223,7 +188,7 @@
 
 
 
-	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
@@ -235,7 +200,8 @@
 									<div class="col-sm-6 col-md-5">
 										<div class="about-img">
 											<img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt=""
-												loading="lazy">
+												loading="lazy" data-tilt data-tilt-max="10" data-tilt-speed="400"
+												data-tilt-glare data-tilt-max-glare="0.2">
 										</div>
 									</div>
 									<!-- Details next to profile image -->
@@ -348,7 +314,7 @@
 
 
 
-	<section class="ftco-section ftco-no-pb" id="resume-section">
+	<section class="ftco-section ftco-no-pb" id="resume-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-10 heading-section text-center ftco-animate">
@@ -452,7 +418,7 @@
 
 
 
-	<section class="ftco-section" id="project-section">
+	<section class="ftco-section" id="project-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -465,7 +431,8 @@
 			<div class="marquee-wrapper">
 				<div class="marquee-content">
 					<!-- Set 1 -->
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/MarketPulse-AI" target="_blank"
@@ -484,7 +451,8 @@
 						</div>
 					</div>
 
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/Detecting-Early-Stage-Knee-Osteoarthritis"
@@ -507,7 +475,8 @@
 						</div>
 					</div>
 
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/SuperStore-Sales-Analysis-and-Forecasting"
@@ -527,7 +496,8 @@
 						</div>
 					</div>
 
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/E-Commerce-Sales-Dashboard" target="_blank"
@@ -548,7 +518,8 @@
 
 
 					<!-- Set 2 (Duplicate for infinite scroll) -->
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/MarketPulse-AI" target="_blank"
@@ -567,7 +538,8 @@
 						</div>
 					</div>
 
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/Detecting-Early-Stage-Knee-Osteoarthritis"
@@ -589,7 +561,8 @@
 						</div>
 					</div>
 
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/SuperStore-Sales-Analysis-and-Forecasting"
@@ -609,7 +582,8 @@
 						</div>
 					</div>
 
-					<div class="project-item">
+					<div class="project-item" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+						data-tilt-max-glare="0.2">
 						<div class="blog-entry justify-content-end">
 							<div class="img-container">
 								<a href="https://github.com/prashant-gtx/E-Commerce-Sales-Dashboard" target="_blank"
@@ -696,7 +670,7 @@
 
 
 
-	<section class="ftco-section" id="skills-section">
+	<section class="ftco-section" id="skills-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -1026,7 +1000,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -1153,6 +1127,9 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+	<!-- Vanilla Tilt -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+	<!-- Particles.js REMOVED -->
 
 </body>
 
