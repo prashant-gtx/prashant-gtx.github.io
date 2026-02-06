@@ -14542,40 +14542,40 @@ body,
   border-color: #ffbd39;
 }
 
-.block-9 .h3 {
-  color: #fff;
+#contact-section .block-9 .h3 {
+  color: #fff !important;
 }
 
-.block-9 .h3 span {
-  color: #ffbd39;
+#contact-section .block-9 .h3 span {
+  color: #ffbd39 !important;
 }
 
 /* Dark Contact Form Styles */
-.contact-form {
+#contact-section .contact-form {
   background: #111 !important;
   /* Extremely dark grey, almost black */
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.contact-form .form-control {
+#contact-section .contact-form .form-control {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff !important;
   transition: all 0.3s ease;
 }
 
-.contact-form .form-control:focus {
+#contact-section .contact-form .form-control:focus {
   background: rgba(255, 255, 255, 0.1) !important;
   border-color: #ffbd39;
   box-shadow: none;
 }
 
-.contact-form .form-control::placeholder {
+#contact-section .contact-form .form-control::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
 
-.contact-form .btn-primary {
+#contact-section .contact-form .btn-primary {
   width: 100%;
   background: #ffbd39;
   border-color: #ffbd39;
@@ -14583,7 +14583,7 @@ body,
   font-weight: 700;
 }
 
-.contact-form .btn-primary:hover {
+#contact-section .contact-form .btn-primary:hover {
   background: transparent;
   color: #ffbd39;
   transform: scale(1.05);
