@@ -14589,3 +14589,83 @@ body,
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 189, 57, 0.4);
 }
+
+/* Project Tech Stack Badges */
+.project-tags {
+  margin-top: 15px;
+}
+
+@keyframes border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.badge-tech {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: transparent;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #ffbd39 !important;
+  transition: border-color 0.3s ease;
+}
+
+/* spinning border */
+.badge-tech::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, transparent, transparent, #ffbd39);
+  animation: border-spin 4s linear infinite;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* inner mask */
+.badge-tech::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  /* 1px border width */
+  background: #000;
+  border-radius: 20px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* ensure text is above pseudo-elements */
+.badge-tech span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hove State */
+.badge-tech:hover {
+  text-decoration: none;
+  border-color: transparent !important;
+  color: #fff;
+}
+
+.badge-tech:hover::before {
+  opacity: 1;
+}
+
+.badge-tech:hover::after {
+  opacity: 1;
+}
