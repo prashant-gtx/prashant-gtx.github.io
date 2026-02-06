@@ -13169,18 +13169,25 @@ textarea.form-control {
 }
 
 .ftco-footer-social li a {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: block;
   float: left;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.ftco-footer-social li a:hover {
+  transform: scale(1.2) rotate(10deg);
+  background: #ffbd39;
+  color: #000;
 }
 
 .ftco-footer-social li a span {
   position: absolute;
-  font-size: 26px;
+  font-size: 20px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -13188,8 +13195,8 @@ textarea.form-control {
   transform: translate(-50%, -50%);
 }
 
-.ftco-footer-social li a:hover {
-  color: #fff;
+.ftco-footer-social li a:hover span {
+  color: #000;
 }
 
 .footer-small-nav>li {
@@ -14503,4 +14510,82 @@ body,
 
 .heading-section h2 {
   color: #ffffff !important;
+}
+
+/* Contact Form Styles */
+.block-9 .img {
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-form {
+  background: #f8f9fa;
+}
+
+.contact-form .form-control {
+  border: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 52px;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+}
+
+.contact-form textarea.form-control {
+  height: auto;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-control:active {
+  border-color: #ffbd39;
+}
+
+.block-9 .h3 {
+  color: #fff;
+}
+
+.block-9 .h3 span {
+  color: #ffbd39;
+}
+
+/* Dark Contact Form Styles */
+.contact-form {
+  background: #111 !important;
+  /* Extremely dark grey, almost black */
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-form .form-control {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffbd39;
+  box-shadow: none;
+}
+
+.contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-form .btn-primary {
+  width: 100%;
+  background: #ffbd39;
+  border-color: #ffbd39;
+  color: #000;
+  font-weight: 700;
+}
+
+.contact-form .btn-primary:hover {
+  background: transparent;
+  color: #ffbd39;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 189, 57, 0.4);
 }
