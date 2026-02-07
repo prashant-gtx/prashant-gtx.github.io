@@ -11792,7 +11792,7 @@ h5,
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 100;
 }
 
 @media (max-width: 991.98px) {
@@ -14668,4 +14668,183 @@ body,
 
 .badge-tech:hover::after {
   opacity: 1;
+}
+
+/* ETL Animation Styles */
+/* ETL Animation Styles */
+.etl-animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 300px;
+  /* Match typical image height */
+  width: 100%;
+}
+
+.etl-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.etl-step .icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid #333;
+}
+
+.etl-step .icon-circle span {
+  font-size: 40px;
+  color: #ffbd39;
+  /* Primary theme color */
+}
+
+.etl-step p {
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+/* Hover effects */
+.etl-step:hover .icon-circle {
+  background: #333;
+  border-color: #ffbd39;
+  transform: scale(1.1);
+}
+
+/* Force remove any potential artifacts */
+.etl-step::before,
+.etl-step::after,
+.etl-step .icon-circle::before,
+.etl-step .icon-circle::after,
+.etl-step .icon-circle span::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+/* Arrow Styles */
+.etl-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 24px;
+  position: relative;
+  width: 60px;
+}
+
+.etl-arrow span {
+  animation: pulseArrow 2s infinite;
+}
+
+/* Animations */
+@keyframes pulseArrow {
+  0% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+}
+
+/* Data Particles Animation */
+.data-particles {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.data-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffbd39, transparent);
+  animation: flowData 2s infinite linear;
+}
+
+@keyframes flowData {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* Specific delays for flow */
+.etl-arrow:nth-child(2) .data-particles::before {
+  animation-delay: 0s;
+}
+
+.etl-arrow:nth-child(4) .data-particles::before {
+  animation-delay: 1s;
+  /* Start after first leg */
+}
+
+/* Rotating Gear specifically for Transform step if we want */
+.etl-step.transform .icon-circle span {
+  display: inline-block;
+  animation: spinGear 10s infinite linear;
+}
+
+@keyframes spinGear {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .etl-animation-container {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .etl-step .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .etl-step .icon-circle span {
+    font-size: 30px;
+  }
+
+  .etl-step p {
+    font-size: 14px;
+  }
 }
