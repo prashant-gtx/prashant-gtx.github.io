@@ -1,5 +1,5 @@
 # Prashant Gupta  
-**Aspiring Data Analyst**
+**Data Analyst | Data Engineer**
 
 📍 Navi Mumbai, India  
 📧 prashantgtx@gmail.com  
@@ -9,7 +9,7 @@ Portfolio: [prashant-gtx.github.io](https://prashant-gtx.github.io/)
 ---
 
 ## About Me  
-Results-driven Data Analyst skilled in converting raw datasets into actionable business insights. Hands-on experience with SQL, Python, and Power BI for data cleaning, Exploratory Data Analysis (EDA), KPI reporting, dashboard automation, and forecasting. Proven ability to identify trends, optimize reporting workflows, and support data-driven decision-making.
+Versatile data professional with strong foundations in data analysis, data engineering, and applied machine learning. Experienced in building end-to-end data pipelines, performing EDA, developing dashboards, and enabling data-driven decision-making. Practical experience with big data tools, cloud platforms, and AI systems including LLMs and RAG. Skilled in transforming raw, large-scale data into reliable analytics solutions and intelligent applications.
 
 ---
 
