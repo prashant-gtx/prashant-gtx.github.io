@@ -14457,6 +14457,16 @@ body,
   color: #000000;
 }
 
+.btn-animate {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.btn-animate:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 189, 57, 0.4);
+}
+
 /* Image Styling */
 .hero-img-container {
   position: relative;
