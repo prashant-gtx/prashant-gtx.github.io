@@ -59,7 +59,7 @@
 			height: 1.5rem;
 			background-color: #ffbd39;
 			transition: width 1.5s ease-in-out;
-			color: #fff;
+			color: #000;
 			display: flex;
 			align-items: center;
 			padding-left: 10px;
@@ -95,6 +95,43 @@
 
 		.zoom-effect:hover {
 			transform: scale(1.1);
+		}
+
+		/* Contact icon animation */
+		.contact-info .icon {
+			transition: transform 0.3s ease;
+		}
+
+		.contact-info .icon:hover {
+			transform: scale(1.2) rotate(360deg);
+			color: #ffbd39;
+			/* Optional: adds a nice color pop if not already colored */
+		}
+
+		/* Social media icon animation */
+		.ftco-footer-social li a {
+			transition: transform 0.3s ease;
+			display: inline-block;
+			/* Ensure transform works */
+		}
+
+		.ftco-footer-social li a:hover {
+			transform: scale(1.2) rotate(360deg);
+			color: #ffbd39;
+			/* matches the theme yellow */
+		}
+
+		/* Certifications animation */
+		#certifications-section .blog-entry .text {
+			transition: all 0.3s ease;
+		}
+
+		#certifications-section .blog-entry:hover .text {
+			transform: translateY(-5px) scale(1.02);
+		}
+
+		#certifications-section .blog-entry:hover .heading a {
+			color: #ffbd39;
 		}
 	</style>
 
@@ -245,7 +282,7 @@
 									</div>
 								</div>
 
-								<div class="skill-mf pt-0">
+								<div class="skill-mf pt-0" style="margin-top: -20px;">
 
 									<span><i class="devicon-mysql-plain colored"></i> SQL</span>
 									<div class="progress">
@@ -711,7 +748,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">AWS Academy Graduate – Data Engineering</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">AWS Academy Graduate –
+									Data Engineering</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">AWS Academy</span>
@@ -723,7 +761,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">AWS Academy Graduate – Generative AI Fundamentals</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">AWS Academy Graduate –
+									Generative AI Fundamentals</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">AWS Academy</span>
@@ -735,7 +774,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">AWS Academy Graduate – Cloud Foundations</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">AWS Academy Graduate –
+									Cloud Foundations</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">AWS Academy</span>
@@ -749,7 +789,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">Data Engineering with Hadoop and Spark</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">Data Engineering with
+									Hadoop and Spark</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">GeeksforGeeks</span>
@@ -763,7 +804,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">Career Essentials in Data Analysis</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">Career Essentials in
+									Data Analysis</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">Microsoft & LinkedIn</span>
@@ -777,7 +819,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">SQL (Basic, Intermediate, Advanced)</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">SQL (Basic,
+									Intermediate, Advanced)</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">HackerRank</span>
@@ -789,21 +832,8 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">Python (Basic)</a></h3>
-							<div class="d-flex align-items-center mb-3 meta justify-content-center">
-								<p class="mb-0">
-									<span class="mr-2">HackerRank</span>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Group 5: Others -->
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end w-100">
-						<div class="text text-center">
-							<h3 class="heading"><a href="#">Databricks Fundamentals</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">Databricks
+									Fundamentals</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">Databricks Academy</span>
@@ -815,7 +845,21 @@
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end w-100">
 						<div class="text text-center">
-							<h3 class="heading"><a href="#">Python for Data Science</a></h3>
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">Python (Basic)</a>
+							</h3>
+							<div class="d-flex align-items-center mb-3 meta justify-content-center">
+								<p class="mb-0">
+									<span class="mr-2">HackerRank</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end w-100">
+						<div class="text text-center">
+							<h3 class="heading"><a style="cursor: default; pointer-events: none;">Python for Data
+									Science</a></h3>
 							<div class="d-flex align-items-center mb-3 meta justify-content-center">
 								<p class="mb-0">
 									<span class="mr-2">Sololearn</span>
