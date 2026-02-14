@@ -18,15 +18,20 @@ Results-driven Data Analyst skilled in converting raw datasets into actionable b
 ### Programming & Databases
 - **Python**: NumPy, Pandas, Matplotlib, Seaborn, BeautifulSoup, Regex (re)
 - **SQL**: Joins, CTEs, Window Functions
+- **R**, **Java**
 - **PostgreSQL**
 
 ### Data Analysis & Visualization
 - **Power BI**, **Excel**, **Tableau**, **DAX**
 - Data Visualization & Dashboarding
 
-### Big Data & Cloud
-- **Big Data**: PySpark, SparkSQL, Apache Hive, Hadoop
-- **Cloud/OS**: AWS, Linux
+### Big Data, Cloud & Tools
+- **Big Data**: PySpark, SparkSQL, Apache Hive, Hadoop, Kafka
+- **Cloud/OS**: AWS, Linux, Databricks
+- **Tools**: n8n, Git, Docker
+
+## Interests
+- Traveling, Singing, Cooking, Multi-Lingual content consumption
 
 ---
 

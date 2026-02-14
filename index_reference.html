@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Prashant Gupta Portfolio</title>
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Portfolio of Prashant Gupta - Data Analyst skilled in Python, SQL, and Power BI.">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css?v=2">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: 1.5rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: 1.5rem;
+			background-color: #ffbd39;
+			transition: width 1.5s ease-in-out;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			padding-left: 10px;
+			font-weight: bold;
+		}
+
+
+
+		/* Animation styles */
+		#typing-animation {
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			white-space: nowrap;
+			display: inline-block;
+			opacity: 1;
+			/* Default opacity */
+			transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+		}
+
+		/* Class for the hidden state (fade out) */
+		.text-hidden {
+			opacity: 0 !important;
+			transform: translateY(10px);
+		}
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Prashant Gupta</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero-new">
+		<div class="container">
+			<div class="row align-items-center justify-content-center" style="min-height: 100vh;">
+				<!-- Left Column: Text -->
+				<div class="col-md-5 text-left order-md-1 order-2">
+					<span class="subheading-small">HELLO!</span>
+					<h1 class="hero-heading mt-3">I'm <span>Prashant</span><br><span>Gupta</span></h1>
+					<!-- Dynamic Text Animation -->
+					<h2 class="hero-subheading mt-3">
+						<span id="typing-animation"></span>
+					</h2>
+
+					<script>
+						const typingAnimationElement = document.getElementById('typing-animation');
+						const typingTexts = [
+							'PG-DBDA at C-DAC Mumbai',
+							'Engineer',
+							'Data Analyst'
+						];
+
+						function playTypingAnimation(text) {
+							if (!typingAnimationElement) return;
+
+							typingAnimationElement.textContent = text;
+							typingAnimationElement.classList.remove('text-hidden');
+
+							setTimeout(() => {
+								typingAnimationElement.classList.add('text-hidden');
+								setTimeout(() => {
+									playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+								}, 500); // Wait for fade out
+							}, 1500); // Display time
+						}
+
+						// Start animation
+						document.addEventListener('DOMContentLoaded', () => {
+							playTypingAnimation(typingTexts[0]);
+						});
+					</script>
+
+					<div class="mt-4">
+						<!-- <h3 class="mb-4 text-white font-weight-bold">Upcoming Data Analyst</h3> -->
+						<p>
+							<a href="https://www.linkedin.com/in/prashant-gtx/" class="btn btn-pill btn-yellow mr-3"
+								target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+							<a href="#project-section" class="btn btn-pill btn-outline-white"
+								rel="noopener noreferrer">MY WORKS</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- Right Column: Image -->
+				<div class="col-md-7 text-center order-md-2 order-1 mb-5 mb-md-0">
+					<div class="hero-img-container">
+						<!-- Explicitly using bg_1.png which is the white shirt transparent image -->
+						<img src="images/bg_1.png" alt="Prashant Gupta" class="img-fluid hero-img">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section" data-aos="fade-up">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt=""
+												loading="lazy" data-tilt data-tilt-max="10" data-tilt-speed="400"
+												data-tilt-glare data-tilt-max-glare="0.2">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Prashant Gupta</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Aspiring Data
+													Analyst</span></p>
+											<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+											<p><span class="title-s">Address: </span> <span>Navi Mumbai, India</span>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf pt-4">
+
+									<span><i class="devicon-mysql-plain colored"></i> SQL</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+									</div>
+
+									<span><i class="devicon-python-plain colored"></i> Python</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+									</div>
+
+									<span><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+											style="width: 1em; height: 1em; vertical-align: middle; fill: #F2C811; margin-right: 0.2rem;">
+											<title>Power BI</title>
+											<path
+												d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z" />
+										</svg> Data Visualisation</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+									</div>
+
+									<span><i class="devicon-rstudio-plain colored"></i> Statistical Analysis</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+									</div>
+
+									<span><i class="devicon-tensorflow-original colored"></i> Machine Learning</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Versatile data professional with strong foundations in data analysis, data
+									engineering, and applied machine learning.
+									Experienced in building end-to-end data pipelines, performing EDA, developing
+									dashboards,
+									and enabling data-driven decision-making. Practical experience with big data tools,
+									cloud platforms, and AI systems
+									including LLMs and RAG. Skilled in transforming raw, large-scale data into reliable
+									analytics solutions and intelligent applications.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+
+									<li class="d-flex"><span>Education:</span>
+										<span>Bachelor of Engineering - Computer Engineering</span>
+									</li>
+									<li class="d-flex"><span>Programming Languages:</span>
+										<span>Python, SQL, R, Java</span>
+									</li>
+									<li class="d-flex"><span>Python Libraries:</span>
+										<span>NumPy, Pandas, Matplotlib, Seaborn, BeautifulSoup, Regex</span>
+									</li>
+									<li class="d-flex"><span>Big Data:</span>
+										<span>PySpark, Spark SQL, Apache Hive, Hadoop</span>
+									</li>
+									<li class="d-flex"><span>Tools & Platforms:</span>
+										<span>Power BI, Excel, Tableau, PostgreSQL, Linux, AWS</span>
+									</li>
+									<li class="d-flex"><span>Interest:</span>
+										<span>Traveling, Singing, Culinary Arts</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section" data-aos="fade-up">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Data Analyst skilled in Python, SQL, Power BI, and Excel with hands-on experience in
+						dashboarding, forecasting, and data-driven decision-making. Built an AI-powered diagnostic tool
+						for early-stage Osteoarthritis and led impactful projects in sales analysis and web development.
+						Passionate about turning data into actionable insights that drive business success.</p>
+					<p class="mt-4"><a href="https://drive.google.com/file/d/1oyhXnzIWEddvn3lFgTgbnSQGBR3bCgx8/view"
+							target="_blank" rel="noopener noreferrer" class="btn btn-primary py-4 px-5 btn-zoom">🚀
+							Explore My Resume</a></p>
+				</div>
+			</div>
+			<!-- Removed separate row for button -->
+		</div>
+		</div>
+	</section>
+	<!-- 		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+-->
+	<!--
+		<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024 - 2025</span>
+						<h2>Junior Data Analyst</h2>
+						<span class="position">The Yellow Strawberry</span>
+						    <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+	<!-- 							<ul>
+								<li>Performed data cleaning, transformation, and visualization using Excel, SQL, Python, and Power BI at The Yellow Strawberry.</li>
+								<li>Generated weekly/monthly dashboards and collaborated cross-functionally to define KPIs and improve reporting accuracy.</li>
+							</ul>
+						</p>
+					</div>
+					
+
+				</div>
+
+			</div>
+
+		<br>
+		<br> -->
+
+	<div class="row justify-content-center pb-5">
+		<div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big big-2">Education</h1>
+			<h2 class="mb-4">Education</h2>
+		</div>
+	</div>
+	<br>
+
+	<div class="timeline-section">
+		<!-- Item 1: PG Diploma (Left) -->
+		<div class="timeline-item left ftco-animate">
+			<div class="timeline-content">
+				<span class="date">2025-2026</span>
+				<h4>Post Graduate Diploma in Big Data Analytics</h4>
+				<span class="position">Centre for Development of Advanced Computing (C-DAC), Mumbai</span>
+				<p class="mt-4">Grade: 80.63%</p>
+			</div>
+		</div>
+
+		<!-- Item 2: BE (Right) -->
+		<div class="timeline-item right ftco-animate">
+			<div class="timeline-content">
+				<span class="date">2021-2025</span>
+				<h4>B.E. in Computer Engineering</h4>
+				<span class="position">SIES Graduate School of Technology</span>
+				<p class="mt-4">Grade: 7.51 CGPA</p>
+			</div>
+		</div>
+
+		<!-- Item 3: Class XII (Left) -->
+		<div class="timeline-item left ftco-animate">
+			<div class="timeline-content">
+				<span class="date">2020-2021</span>
+				<h4>Class XII</h4>
+				<span class="position">DAV Public School, Nerul</span>
+				<p class="mt-4">Grade: 84%</p>
+			</div>
+		</div>
+
+		<!-- Item 4: Class X (Right) -->
+		<div class="timeline-item right ftco-animate">
+			<div class="timeline-content">
+				<span class="date">2018-2019</span>
+				<h4>Class X</h4>
+				<span class="position">DAV Public School, Nerul</span>
+				<p class="mt-4">Grade: 90.40%</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<section class="ftco-section" id="project-section" data-aos="fade-up">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are some of my highlighted projects that reflect my passion for building impactful
+						solutions.</p>
+				</div>
+			</div>
+			<div class="marquee-wrapper">
+				<div class="marquee-content">
+					<!-- Set 1 -->
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/MarketPulse-AI" target="_blank"
+									rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_6.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a href="https://github.com/prashant-gtx/MarketPulse-AI"
+										target="_blank" rel="noopener noreferrer">MarketPulse AI</a></h3>
+								<p>MarketPulse-AI is an AI-powered financial news intelligence platform that
+									aggregates real-time market news, performs sentiment analysis using FinBERT,
+									and applies a Retrieval-Augmented Generation (RAG) pipeline to provide grounded,
+									context-aware insights through a local LLM (Llama 3.2).</p>
+								<div class="project-tags">
+									<span class="badge-tech">Fast API</span>
+									<span class="badge-tech">RAG</span>
+									<span class="badge-tech">ChromaDB</span>
+									<span class="badge-tech">Llama 3.2</span>
+									<span class="badge-tech">FinBERT</span>
+									<span class="badge-tech">BeautifulSoup</span>
+									<span class="badge-tech">APScheduler</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/Detecting-Early-Stage-Knee-Osteoarthritis"
+									target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_4.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a
+										href="https://github.com/prashant-gtx/Detecting-Early-Stage-Knee-Osteoarthritis"
+										target="_blank" rel="noopener noreferrer">Detecting Early Stage Knee
+										Osteoarthritis</a></h3>
+								<p>Developed a deep learning–based knee osteoarthritis detection system using transfer
+									learning on CNN models to classify X-ray images into five severity levels.
+									The solution includes a Streamlit web app for image upload, diagnostic report
+									generation,
+									and hospital recommendations, supporting early and accessible clinical
+									decision-making.</p>
+								<div class="project-tags">
+									<span class="badge-tech">ResNet-50</span>
+									<span class="badge-tech">Transfer Learning</span>
+									<span class="badge-tech">CNN</span>
+									<span class="badge-tech">Streamlit</span>
+									<span class="badge-tech">Keras</span>
+									<span class="badge-tech">TensorFlow</span>
+									<span class="badge-tech">VGG16</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/SuperStore-Sales-Analysis-and-Forecasting"
+									target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_1.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a
+										href="https://github.com/prashant-gtx/SuperStore-Sales-Analysis-and-Forecasting"
+										target="_blank" rel="noopener noreferrer">SuperStore Sales Analysis and
+										Forecasting</a></h3>
+								<p>Built an interactive Power BI dashboard for Superstore sales, featuring regional
+									KPIs,
+									product trends, and 15-day sales forecasting to support data-driven decisions.</p>
+								<div class="project-tags">
+									<span class="badge-tech">Power BI</span>
+									<span class="badge-tech">Forecasting</span>
+									<span class="badge-tech">Time Series Analysis</span>
+									<span class="badge-tech">DAX</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/E-Commerce-Sales-Dashboard" target="_blank"
+									rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_2.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a
+										href="https://github.com/prashant-gtx/E-Commerce-Sales-Dashboard"
+										target="_blank" rel="noopener noreferrer">E-Commerce Sales Dashboard</a></h3>
+								<p>Created a dynamic Power BI dashboard to visualize e-commerce sales, profits, and
+									product
+									trends by state, category, and payment modes for performance optimization.</p>
+								<div class="project-tags">
+									<span class="badge-tech">Power BI</span>
+									<span class="badge-tech">Data Visualization</span>
+									<span class="badge-tech">E-Commerce</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Set 2 (Duplicate for infinite scroll) -->
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/MarketPulse-AI" target="_blank"
+									rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_6.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a href="https://github.com/prashant-gtx/MarketPulse-AI"
+										target="_blank" rel="noopener noreferrer">MarketPulse AI</a></h3>
+								<p>MarketPulse-AI is an AI-powered financial news intelligence platform that
+									aggregates real-time market news, performs sentiment analysis using FinBERT,
+									and applies a Retrieval-Augmented Generation (RAG) pipeline to provide grounded,
+									context-aware insights through a local LLM (Llama 3.2).</p>
+								<div class="project-tags">
+									<span class="badge-tech">Fast API</span>
+									<span class="badge-tech">RAG</span>
+									<span class="badge-tech">ChromaDB</span>
+									<span class="badge-tech">Llama 3.2</span>
+									<span class="badge-tech">FinBERT</span>
+									<span class="badge-tech">BeautifulSoup</span>
+									<span class="badge-tech">APScheduler</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/Detecting-Early-Stage-Knee-Osteoarthritis"
+									target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_4.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a
+										href="https://github.com/prashant-gtx/Detecting-Early-Stage-Knee-Osteoarthritis"
+										target="_blank" rel="noopener noreferrer">Detecting Early Stage Knee
+										Osteoarthritis
+										Using Deep Transfer Learning</a></h3>
+								<p>Developed an automated diagnostic system using deep learning to classify knee
+									osteoarthritis severity (KL grades 0–4) from X-ray images. Integrated the model into
+									a
+									Streamlit web app with Grad-CAM for visual explanations and clinical support.</p>
+								<div class="project-tags">
+									<span class="badge-tech">Python</span>
+									<span class="badge-tech">Deep Learning</span>
+									<span class="badge-tech">CNN</span>
+									<span class="badge-tech">Streamlit</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/SuperStore-Sales-Analysis-and-Forecasting"
+									target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_1.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a
+										href="https://github.com/prashant-gtx/SuperStore-Sales-Analysis-and-Forecasting"
+										target="_blank" rel="noopener noreferrer">SuperStore Sales Analysis and
+										Forecasting</a></h3>
+								<p>Built an interactive Power BI dashboard for Superstore sales, featuring regional
+									KPIs,
+									product trends, and 15-day sales forecasting to support data-driven decisions.</p>
+								<div class="project-tags">
+									<span class="badge-tech">Power BI</span>
+									<span class="badge-tech">Forecasting</span>
+									<span class="badge-tech">Data Analysis</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-item">
+						<div class="blog-entry justify-content-end">
+							<div class="img-container">
+								<a href="https://github.com/prashant-gtx/E-Commerce-Sales-Dashboard" target="_blank"
+									rel="noopener noreferrer" class="block-20 zoom-effect"
+									style="background-image: url('images/proj_2.jpg');">
+								</a>
+							</div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading text-center"><a
+										href="https://github.com/prashant-gtx/E-Commerce-Sales-Dashboard"
+										target="_blank" rel="noopener noreferrer">E-Commerce Sales Dashboard</a></h3>
+								<p>Created a dynamic Power BI dashboard to visualize e-commerce sales, profits, and
+									product
+									trends by state, category, and payment modes for performance optimization.</p>
+								<div class="project-tags">
+									<span class="badge-tech">Power BI</span>
+									<span class="badge-tech">Data Visualization</span>
+									<span class="badge-tech">E-Commerce</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="24">0</strong>
+							<span>Certifications</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="15"></strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<div class="d-flex justify-content-center align-items-center">
+								<strong class="number" data-number="2000">0</strong><span
+									style="color: #ffbd39; margin-left: 5px; font-weight: 700;">+</span>
+							</div>
+							<span>Learning Hours</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<div class="d-flex justify-content-center align-items-center">
+								<strong class="number" data-number="1000">0</strong><span
+									style="color: #ffbd39; margin-left: 5px; font-weight: 700;">+</span>
+							</div>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/prashant-gtx" class="btn btn-primary py-3 px-5 btn-zoom"
+								target="_blank" rel="noopener noreferrer">💡 View My GitHub Projects</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="skills-section" data-aos="fade-up">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Skills</h1>
+					<h2 class="mb-4">Technical Skills</h2>
+					<p>Technical skills and tools I have worked with.</p>
+				</div>
+			</div>
+
+			<!-- Technical Skills Marquee -->
+			<div class="marquee-wrapper">
+				<div class="marquee-content">
+					<!-- Set 1 -->
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-python-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Python</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-mysql-plain colored"></i></div>
+						<div class="text-box">
+							<h3>SQL</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-java-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Java</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-rstudio-plain colored"></i></div>
+						<div class="text-box">
+							<h3>R</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-numpy-plain colored"></i></div>
+						<div class="text-box">
+							<h3>NumPy</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-pandas-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Pandas</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-matplotlib-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Matplotlib</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/pyspark.png" style="width: 80px;"></div>
+						<div class="text-box">
+							<h3>Spark</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/hive.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Hive</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/hadoop_colored.png" style="width: 80px;"></div>
+						<div class="text-box">
+							<h3>Hadoop</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-tensorflow-original colored"></i></div>
+						<div class="text-box">
+							<h3>TensorFlow</h3>
+						</div>
+					</div>
+
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-apachekafka-original colored"></i></div>
+						<div class="text-box">
+							<h3>Kafka</h3>
+						</div>
+					</div>
+
+					<!-- Set 2 (Duplicate for infinite scroll) -->
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-python-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Python</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-mysql-plain colored"></i></div>
+						<div class="text-box">
+							<h3>SQL</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-java-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Java</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-rstudio-plain colored"></i></div>
+						<div class="text-box">
+							<h3>R</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-numpy-plain colored"></i></div>
+						<div class="text-box">
+							<h3>NumPy</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-pandas-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Pandas</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-matplotlib-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Matplotlib</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/pyspark.png" style="width: 80px;"></div>
+						<div class="text-box">
+							<h3>Spark</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/hive.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Hive</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/hadoop_colored.png" style="width: 80px;"></div>
+						<div class="text-box">
+							<h3>Hadoop</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-tensorflow-original colored"></i></div>
+						<div class="text-box">
+							<h3>TensorFlow</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-apachekafka-original colored"></i></div>
+						<div class="text-box">
+							<h3>Kafka</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row justify-content-center py-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h2 class="mb-4">Tools & Platforms</h2>
+				</div>
+			</div>
+
+			<!-- Tools Marquee -->
+			<div class="marquee-wrapper">
+				<div class="marquee-content">
+					<!-- Set 1 -->
+					<div class="skill-box">
+						<div class="icon-box">
+							<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+								style="width: 60px; height: 60px; fill: #ffffff;">
+								<title>Power BI</title>
+								<path
+									d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z" />
+							</svg>
+						</div>
+						<div class="text-box">
+							<h3>Power BI</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+						<div class="text-box">
+							<h3>AWS</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-git-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Git</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-github-original colored"></i></div>
+						<div class="text-box">
+							<h3>GitHub</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-vscode-plain colored"></i></div>
+						<div class="text-box">
+							<h3>VS Code</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-linux-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Linux</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-postgresql-plain colored"></i></div>
+						<div class="text-box">
+							<h3>PostgreSQL</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/excel.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Excel</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg"
+								style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Tableau</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/n8n.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>n8n</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/databricks.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Databricks</h3>
+						</div>
+					</div>
+
+					<!-- Set 2 (Duplicate) -->
+					<div class="skill-box">
+						<div class="icon-box">
+							<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+								style="width: 60px; height: 60px; fill: #ffffff;">
+								<title>Power BI</title>
+								<path
+									d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z" />
+							</svg>
+						</div>
+						<div class="text-box">
+							<h3>Power BI</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+						<div class="text-box">
+							<h3>AWS</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-git-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Git</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-github-original colored"></i></div>
+						<div class="text-box">
+							<h3>GitHub</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-vscode-plain colored"></i></div>
+						<div class="text-box">
+							<h3>VS Code</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-linux-plain colored"></i></div>
+						<div class="text-box">
+							<h3>Linux</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><i class="devicon-postgresql-plain colored"></i></div>
+						<div class="text-box">
+							<h3>PostgreSQL</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/excel.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Excel</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg"
+								style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Tableau</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/n8n.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>n8n</h3>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="icon-box"><img src="images/skills/databricks.png" style="width: 60px;"></div>
+						<div class="text-box">
+							<h3>Databricks</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section" data-aos="fade-up">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Navi Mumbai, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="">+91-9029140773</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:prashantgtx@gmail.com" target="_blank"
+								rel="noopener noreferrer">prashantgtx@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1oyhXnzIWEddvn3lFgTgbnSQGBR3bCgx8/view"
+								target="_blank" rel="noopener noreferrer">Click here</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row block-9 justify-content-center">
+				<div class="col-md-8 d-flex flex-column align-items-center justify-content-center">
+					<div class="text-center mb-4">
+						<h2 class="h3 mb-3">Have a <span>Question?</span></h2>
+					</div>
+					<form action="https://formspree.io/f/xojnabva" method="POST" class="p-4 p-md-5 contact-form w-100">
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" placeholder="Your Name" required>
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Your Email" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="subject" placeholder="Subject" required>
+						</div>
+						<div class="form-group">
+							<textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"
+								required></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0 mt-5">
+				<li class="ftco-animate normal-txt">Find me on </li>
+				<li class="ftco-animate"><a href="https://www.linkedin.com/in/prashant-gtx/" target="_blank"
+						rel="noopener noreferrer" aria-label="LinkedIn"><span class="icon-linkedin"></span></a>
+				</li>
+				<li class="ftco-animate"><a href="https://x.com/PrashantGupta_0" target="_blank"
+						rel="noopener noreferrer" aria-label="Twitter"><span class="icon-twitter"></span></a>
+				</li>
+				<li class="ftco-animate"><a href="https://www.facebook.com/prashantgtx" target="_blank"
+						rel="noopener noreferrer" aria-label="Facebook"><span class="icon-facebook"></span></a>
+				</li>
+				<li class="ftco-animate"><a href="https://www.instagram.com/prashant.gtx/" target="_blank"
+						rel="noopener noreferrer" aria-label="Instagram"><span class="icon-instagram"></span></a>
+				</li>
+			</ul>
+			<br>
+		</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p>
+						Copyright &copy;
+						<span id="footer-year"></span> All rights reserved
+					</p>
+					<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+	<!-- Back to Top -->
+	<a href="#" class="btn btn-primary p-3 back-to-top" aria-label="Back to Top">
+		<span class="icon-arrow-up"></span>
+	</a>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<!-- Vanilla Tilt -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+	<!-- Particles.js REMOVED -->
+
+</body>
+
+</html>
