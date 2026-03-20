@@ -15,21 +15,21 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>PG Diploma in Big Data Analytics</h4>
-                <h5>CDAC</h5>
+                <h5>CDAC Mumbai</h5>
               </div>
               <h3>80.63%</h3>
             </div>
             <p>
-              Specialized in big data technologies, data pipelines, Hadoop, Spark, and advanced scalable data systems.
+              Specialized in big data technologies such as Hadoop, Spark, Hive, Kafka, AWS, Machine Learning and AI.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
                 <h4>B.E. in Computer Engineering</h4>
-                <h5>Mumbai University (SIES-GST)</h5>
+                <h5>SIES Graduate School of Technology, Nerul</h5>
               </div>
-              <h3>7.51 CGPA</h3>
+              <h3>75.42%</h3>
             </div>
             <p>
               Gained strong foundations in computer science, software engineering, algorithms, and data structures.
@@ -41,10 +41,10 @@ const Career = () => {
                 <h4>Class XII (2020 - 2021)</h4>
                 <h5>DAV Public School, Nerul</h5>
               </div>
-              <h3>84%</h3>
+              <h3>84.00%</h3>
             </div>
             <p>
-              Completed higher secondary education with a strong focus on science and mathematics.
+              Completed higher secondary education with a strong focus on science, mathematics and computer science.
             </p>
           </div>
           <div className="career-info-box">
