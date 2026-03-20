@@ -15,7 +15,7 @@ The portfolio is built with modern web technologies, featuring highly interactiv
 
 ## 📸 Snapshot
 
-![Portfolio-Preview](public/images/preview.png)
+![Portfolio-Preview](public/images/portfolio-preview.png)
 
 ## 🚀 Setup & Local Development
 

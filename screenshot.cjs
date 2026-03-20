@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
     await page.setViewport({width: 1440, height: 900});
     
     console.log('Navigating to website...');
-    await page.goto('https://prashant-gtx.github.io/', {waitUntil: 'networkidle0', timeout: 60000});
+    await page.goto('https://prashant-gtx.github.io/?v=' + Date.now(), {waitUntil: 'networkidle0', timeout: 60000});
     
     console.log('Waiting 10 seconds for initial 3D load and GSAP animations...');
     await new Promise(r => setTimeout(r, 10000));
