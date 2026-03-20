@@ -34,7 +34,7 @@ const Contact = () => {
               <p>Navi Mumbai, India</p>
               <h4>Download Resume</h4>
               <p>
-                <a href="/assets/resume.pdf" download="Prashant_Gupta_Resume.pdf" data-cursor="disable">
+                <a href="/assets/Resume.pdf" download="Prashant_Gupta_Resume.pdf" data-cursor="disable">
                   Click here
                 </a>
               </p>
