@@ -1,0 +1,148 @@
+.techstack-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: auto;
+  width: var(--cWidth);
+  max-width: 1920px;
+  margin: -60px auto 0 auto;
+  z-index: 9;
+  padding: 0 0 50px 0;
+  overflow: hidden;
+  perspective: 1500px;
+}
+
+.techstack-section h2 {
+  font-size: 80px;
+  line-height: 85px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: 40px;
+}
+
+.techstack-section h2 > span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+.marquee-container {
+  width: 110vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow: visible;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  /* Soft fade on edges */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation: scroll-right 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-items {
+  display: flex;
+  gap: 50px;
+  padding-right: 50px; /* Gap between the end of list 1 and start of list 2 */
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 15px 35px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
+  box-shadow: 
+    10px 15px 20px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.tech-icon:hover {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  border-color: rgba(20, 184, 166, 0.6);
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 
+    20px 30px 40px rgba(0, 0, 0, 0.7),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.tech-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+.tech-icon span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e4e4e7;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .techstack-section {
+    min-height: auto;
+    padding: 30px 0;
+  }
+  .tech-icon {
+    padding: 10px 20px;
+    gap: 10px;
+  }
+  .tech-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  .tech-icon span {
+    font-size: 15px;
+  }
+}

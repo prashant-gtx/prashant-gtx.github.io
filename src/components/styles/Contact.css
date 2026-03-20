@@ -1,0 +1,201 @@
+.contact-section {
+  margin: auto;
+  padding-bottom: 100px;
+  margin-top: -30px; /* Negative margin to violently reduce the gap above */
+  position: relative;
+  z-index: 2;
+  background-color: var(--backgroundColor);
+  width: 1600px !important; /* Force override global limit */
+  max-width: 92vw !important; /* Stretch across entire screen */
+}
+
+.contact-section h2 {
+  font-size: 80px;
+  line-height: 85px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0 0 50px 0;
+}
+
+.contact-section h2 span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Balance columns equally to use page space properly */
+  gap: 40px; /* Compress gap so panels expand wider */
+  width: 100%; /* Fully stretch to boundaries */
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap between info blocks */
+  justify-content: flex-start;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-box h4 {
+  font-weight: 500;
+  margin: 0 0 5px 0; /* Reduced margin */
+  opacity: 0.6;
+}
+
+.contact-box p {
+  margin: 0 0 15px 0; /* Reduced margin */
+}
+
+.contact-form-container, .contact-info-container {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px 40px; /* Reduced vertical and horizontal padding */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-heading {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.form-heading span {
+  color: var(--accentColor);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Tighter gap */
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px; /* Shorter inputs */
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accentColor);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.btn-submit {
+  padding: 16px 30px;
+  background-color: var(--accentColor);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+a.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a.contact-social:last-child {
+  border-bottom: none;
+}
+
+a.contact-social:hover {
+  color: var(--accentColor);
+  border-color: var(--accentColor);
+  transform: translateX(5px);
+}
+
+.contact-social svg:last-child {
+  margin-left: auto; /* Push the arrow to the right */
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 40px;
+}
+
+.contact-footer h2 {
+  font-weight: 400;
+  font-size: 23px;
+  margin: 0;
+}
+
+.contact-footer h2 span {
+  color: var(--accentColor);
+}
+
+.contact-footer h5 {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.5;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1300px) {
+  .contact-section h3 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact-section {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .contact-footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
