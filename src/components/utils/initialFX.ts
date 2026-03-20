@@ -74,12 +74,14 @@ export function initialFX() {
 
   var landingText3 = new SplitText(".landing-h2-info-1", TextProps);
   var landingText3b = new SplitText(".landing-h2-info-2", TextProps);
+  var landingText3c = new SplitText(".landing-h2-info-3", TextProps);
   var landingText4 = new SplitText(".landing-h2-1", TextProps);
   var landingText5 = new SplitText(".landing-h2-2", TextProps);
   var landingText6 = new SplitText(".landing-h2-3", TextProps);
+  var landingText7 = new SplitText(".landing-h2-4", TextProps);
 
-  LoopText([landingText2, landingText3, landingText3b]);
-  LoopText([landingText4, landingText5, landingText6]);
+  LoopText([landingText2, landingText3, landingText3b, landingText3c]);
+  LoopText([landingText4, landingText5, landingText6, landingText7]);
 }
 
 function LoopText(texts: SplitText[]) {
