@@ -23,10 +23,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 
-.techstack-section h2 > span {
+.techstack-section h2>span {
   font-family: "Geist", sans-serif;
   font-weight: 300;
 }
@@ -66,7 +67,8 @@
 .marquee-items {
   display: flex;
   gap: 50px;
-  padding-right: 50px; /* Gap between the end of list 1 and start of list 2 */
+  padding-right: 50px;
+  /* Gap between the end of list 1 and start of list 2 */
 }
 
 .tech-icon {
@@ -84,7 +86,7 @@
   padding: 15px 35px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   white-space: nowrap;
-  box-shadow: 
+  box-shadow:
     10px 15px 20px rgba(0, 0, 0, 0.4),
     inset 2px 2px 5px rgba(255, 255, 255, 0.05);
 }
@@ -93,7 +95,7 @@
   background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
   border-color: rgba(20, 184, 166, 0.6);
   transform: scale(1.15) translateY(-5px);
-  box-shadow: 
+  box-shadow:
     20px 30px 40px rgba(0, 0, 0, 0.7),
     inset 2px 2px 5px rgba(255, 255, 255, 0.2);
 }
@@ -102,7 +104,7 @@
   width: 45px;
   height: 45px;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
 }
 
 .tech-icon span {
@@ -115,6 +117,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -124,6 +127,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -134,14 +138,17 @@
     min-height: auto;
     padding: 30px 0;
   }
+
   .tech-icon {
     padding: 10px 20px;
     gap: 10px;
   }
+
   .tech-icon img {
     width: 30px;
     height: 30px;
   }
+
   .tech-icon span {
     font-size: 15px;
   }

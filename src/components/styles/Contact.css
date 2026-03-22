@@ -1,17 +1,19 @@
 .contact-section {
   margin: auto;
   padding-bottom: 100px;
-  margin-top: -30px; /* Negative margin to violently reduce the gap above */
+  margin-top: -80px;
+  /* Negative margin to violently reduce the gap above */
   position: relative;
   z-index: 2;
   background-color: var(--backgroundColor);
-  width: 1600px !important; /* Force override global limit */
-  max-width: 92vw !important; /* Stretch across entire screen */
+  width: 1600px !important;
+  /* Force override global limit */
+  max-width: 92vw !important;
+  /* Stretch across entire screen */
 }
 
 .contact-section h2 {
   font-size: 80px;
-  line-height: 85px;
   font-weight: 600;
   text-align: center;
   background: linear-gradient(0deg, #0d9488, #ffffff);
@@ -19,7 +21,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  margin: 0 0 50px 0;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
 }
 
 .contact-section h2 span {
@@ -29,17 +32,21 @@
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Balance columns equally to use page space properly */
-  gap: 40px; /* Compress gap so panels expand wider */
-  width: 100%; /* Fully stretch to boundaries */
+  grid-template-columns: 1fr 1fr;
+  /* Balance columns equally to use page space properly */
+  gap: 40px;
+  /* Compress gap so panels expand wider */
+  width: 100%;
+  /* Fully stretch to boundaries */
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .contact-info-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Reduced gap between info blocks */
+  gap: 20px;
+  /* Reduced gap between info blocks */
   justify-content: flex-start;
 }
 
@@ -50,17 +57,21 @@
 
 .contact-box h4 {
   font-weight: 500;
-  margin: 0 0 5px 0; /* Reduced margin */
+  margin: 0 0 5px 0;
+  /* Reduced margin */
   opacity: 0.6;
 }
 
 .contact-box p {
-  margin: 0 0 15px 0; /* Reduced margin */
+  margin: 0 0 15px 0;
+  /* Reduced margin */
 }
 
-.contact-form-container, .contact-info-container {
+.contact-form-container,
+.contact-info-container {
   background: rgba(255, 255, 255, 0.02);
-  padding: 30px 40px; /* Reduced vertical and horizontal padding */
+  padding: 30px 40px;
+  /* Reduced vertical and horizontal padding */
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -79,12 +90,14 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Tighter gap */
+  gap: 15px;
+  /* Tighter gap */
 }
 
 .form-control {
   width: 100%;
-  padding: 12px 15px; /* Shorter inputs */
+  padding: 12px 15px;
+  /* Shorter inputs */
   background: rgba(10, 10, 10, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -124,7 +137,7 @@ a.contact-social {
   align-items: center;
   gap: 15px;
   font-size: 22px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 6px;
   margin-bottom: 12px;
   text-decoration: none;
@@ -143,7 +156,8 @@ a.contact-social:hover {
 }
 
 .contact-social svg:last-child {
-  margin-left: auto; /* Push the arrow to the right */
+  margin-left: auto;
+  /* Push the arrow to the right */
   font-size: 18px;
   opacity: 0.5;
 }
@@ -152,7 +166,7 @@ a.contact-social:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
 }
 
@@ -187,12 +201,12 @@ a.contact-social:hover {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .contact-section {
     margin-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .contact-footer {
     flex-direction: column;
     gap: 20px;
