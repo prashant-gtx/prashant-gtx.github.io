@@ -27,7 +27,7 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>B.E. in Computer Engineering</h4>
-                <h5>SIES Graduate School of Technology, Nerul</h5>
+                <h5>SIES Graduate School of Technology</h5>
               </div>
               <h3>75.42%</h3>
             </div>
@@ -38,7 +38,7 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Class XII (2020 - 2021)</h4>
+                <h4>Class XII</h4>
                 <h5>DAV Public School, Nerul</h5>
               </div>
               <h3>84.00%</h3>
@@ -50,7 +50,7 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Class X (2018 - 2019)</h4>
+                <h4>Class X</h4>
                 <h5>DAV Public School, Nerul</h5>
               </div>
               <h3>90.40%</h3>
