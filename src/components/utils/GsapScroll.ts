@@ -137,7 +137,7 @@ export function setAllTimeline() {
     scrollTrigger: {
       trigger: ".career-section",
       start: "top 30%",
-      end: "100% center",
+      end: "bottom 20%",
       scrub: true,
       invalidateOnRefresh: true,
     },
