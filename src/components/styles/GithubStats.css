@@ -15,7 +15,8 @@
   gap: 20px;
   max-width: 900px;
   width: 100%;
-  margin: 0 auto -50px; /* Reduced Overlap with banner */
+  margin: 0 auto -50px;
+  /* Reduced Overlap with banner */
   z-index: 10;
   position: relative;
   padding: 0 20px;
@@ -25,9 +26,19 @@
   background: #151515;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  padding: 10px 15px; /* Reduced vertical padding */
-  min-width: 120px; /* Allow cards to shrink more */
+  padding: 4px 8px;
+  min-width: 120px;
   text-align: center;
+
+  display: flex;
+  /* ADD */
+  flex-direction: column;
+  /* ADD */
+  justify-content: center;
+  /* vertical center */
+  align-items: center;
+  /* horizontal center */
+
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -38,24 +49,28 @@
 }
 
 .stat-card h3 {
-  font-size: 32px; /* Decreased font */
+  font-size: 32px;
+  /* Decreased font */
   font-weight: 700;
   color: var(--accentColor);
   margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .stat-card h3 span {
-  font-size: 20px; /* Decreased span */
+  font-size: 20px;
+  /* Decreased span */
   margin-left: 2px;
 }
 
 .stat-card p {
   color: #a1a1aa;
-  font-size: 14px; /* Decreased p */
-  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 20px);
+  font-weight: 500;
+  margin: 0;
 }
 
 .github-banner {
@@ -63,12 +78,14 @@
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  padding: 80px 20px 60px; /* Compress the banner vertically */
+  padding: 80px 20px 60px;
+  /* Compress the banner vertically */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #050505; /* Fallback */
+  background-color: #050505;
+  /* Fallback */
 }
 
 .github-banner-video {
@@ -87,7 +104,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8));
   z-index: 1;
 }
 
@@ -132,6 +149,7 @@
 }
 
 .github-btn:hover {
+  color: #fff;
   filter: brightness(1.1);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
@@ -143,17 +161,21 @@
 
 @media (max-width: 1024px) {
   .stats-cards-container {
-    grid-template-columns: repeat(4, 1fr); /* Force same line */
+    grid-template-columns: repeat(4, 1fr);
+    /* Force same line */
     gap: 15px;
     margin-bottom: -50px;
   }
+
   .stat-card {
     min-width: 100px;
     padding: 20px 10px;
   }
+
   .stat-card h3 {
     font-size: 28px;
   }
+
   .stat-card p {
     font-size: 13px;
   }
@@ -163,21 +185,29 @@
   .github-banner {
     padding: 80px 20px 60px;
   }
+
   .stats-cards-container {
-    gap: 5px; /* tiny gap to fit 4 on mobile */
-    margin-bottom: 40px; 
+    gap: 5px;
+    /* tiny gap to fit 4 on mobile */
+    margin-bottom: 40px;
     padding: 0 5px;
   }
+
   .stat-card {
-    min-width: 50px; /* Allow shrinking */
-    padding: 10px 5px; /* Extremely tight padding */
+    min-width: 50px;
+    /* Allow shrinking */
+    padding: 10px 5px;
+    /* Extremely tight padding */
   }
+
   .stat-card h3 {
-    font-size: 22px; 
+    font-size: 22px;
   }
+
   .stat-card h3 span {
     font-size: 16px;
   }
+
   .stat-card p {
     font-size: 10px;
   }
