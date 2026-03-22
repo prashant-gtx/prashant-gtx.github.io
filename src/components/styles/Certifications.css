@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin: auto;
 }
 
 .certifications-section h2 {
@@ -25,10 +26,10 @@
 }
 
 .certifications-intro {
-  font-size: 20px;
-  color: #ccc;
+  font-size: 16px;
+  color: #888;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   max-width: 600px;
   font-weight: 300;
 }
@@ -36,7 +37,7 @@
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -44,21 +45,21 @@
   position: relative;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 40px 30px;
+  border-radius: 15px;
+  padding: 25px 20px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .cert-card:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--accentColor);
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .cert-content {
@@ -67,11 +68,11 @@
 }
 
 .cert-card h4 {
-  font-size: 24px;
-  line-height: 1.3;
+  font-size: 18px;
+  line-height: 1.4;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 
@@ -80,11 +81,11 @@
 }
 
 .cert-card p {
-  font-size: 16px;
-  color: #888;
+  font-size: 13px;
+  color: #666;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .cert-glow {
