@@ -153,12 +153,12 @@ a.contact-social:hover {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .contact-footer h2 {
   font-weight: 400;
-  font-size: 23px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -167,7 +167,7 @@ a.contact-social:hover {
 }
 
 .contact-footer h5 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   align-items: center;

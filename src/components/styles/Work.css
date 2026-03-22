@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
   background-color: var(--backgroundColor);
-  padding: 40px 0; /* Reduced initial padding to close gap above projects section */
+  padding: 40px 0 0 0; /* Reduced bottom padding to close gap above following section */
   margin-top: -20px; /* Pull the section slightly upward */
 }
 
@@ -171,7 +171,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .carousel-dot {

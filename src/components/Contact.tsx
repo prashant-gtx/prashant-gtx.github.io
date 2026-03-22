@@ -84,7 +84,7 @@ const Contact = () => {
 
         <div className="contact-footer">
           <h2>
-            Designed and Developed <br /> by <span>Prashant Gupta</span>
+            Designed and Developed by <span>Prashant Gupta</span>
           </h2>
           <h5>
             <MdCopyright /> {new Date().getFullYear()} All rights reserved
