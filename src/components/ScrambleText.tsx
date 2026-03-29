@@ -35,7 +35,7 @@ const ScrambleText = ({ text }: ScrambleTextProps) => {
     }
 
     let isMounted = true;
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const runScramble = () => {
       let iterations = 0;
