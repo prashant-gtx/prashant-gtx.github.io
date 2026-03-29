@@ -8,21 +8,13 @@ interface ScrambleTextProps {
 
 const ScrambleText = ({ text }: ScrambleTextProps) => {
   const [displayText, setDisplayText] = useState("");
-  const [isScrambling, setIsScrambling] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const containerRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          if (!isScrambling && displayText !== text) {
-            scramble();
-          }
-        } else {
-          // Reset when out of view so it animates again next time
-          setDisplayText("");
-          setIsScrambling(false);
-        }
+        setIsIntersecting(entries[0].isIntersecting);
       },
       { threshold: 0.1 }
     );
@@ -34,36 +26,61 @@ const ScrambleText = ({ text }: ScrambleTextProps) => {
     return () => {
       observer.disconnect();
     };
-  }, [text, isScrambling, displayText]);
+  }, []);
 
-  const scramble = () => {
-    setIsScrambling(true);
-    let iterations = 0;
-    const maxIterations = text.length * 3;
+  useEffect(() => {
+    if (!isIntersecting) {
+      setDisplayText("");
+      return;
+    }
 
-    const interval = setInterval(() => {
-      setDisplayText(() => {
-        return text
-          .split("")
-          .map((letter, index) => {
-            if (index < iterations / 3) {
-              return text[index];
-            }
-            if (letter === " ") return " ";
-            return CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)];
-          })
-          .join("");
-      });
+    let isMounted = true;
+    let timeoutId: NodeJS.Timeout;
 
-      if (iterations >= maxIterations) {
-        clearInterval(interval);
-        setDisplayText(text);
-        // We do not set isScrambling to false here so it doesn't immediately re-trigger
-        // while it's still in view. It will be reset when it leaves the viewport.
-      }
-      iterations += 1;
-    }, 40);
-  };
+    const runScramble = () => {
+      let iterations = 0;
+      const maxIterations = text.length * 3;
+
+      const interval = setInterval(() => {
+        if (!isMounted) {
+          clearInterval(interval);
+          return;
+        }
+
+        setDisplayText(() => {
+          return text
+            .split("")
+            .map((letter, index) => {
+              if (index < iterations / 3) {
+                return text[index];
+              }
+              if (letter === " ") return " ";
+              return CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)];
+            })
+            .join("");
+        });
+
+        if (iterations >= maxIterations) {
+          clearInterval(interval);
+          if (isMounted) {
+            setDisplayText(text);
+            // Wait 3 seconds before scrambling again
+            timeoutId = setTimeout(() => {
+              if (isMounted) runScramble();
+            }, 3000);
+          }
+        }
+        iterations += 1;
+      }, 40);
+    };
+
+    runScramble();
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timeoutId);
+    };
+  }, [isIntersecting, text]);
 
   const renderText = () => {
     // Retain the specific span styling for "Question?" when the animation is finished
