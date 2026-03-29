@@ -32,10 +32,16 @@ const Contact = () => {
             <div className="contact-box">
               <h4>Address</h4>
               <p>Navi Mumbai, India</p>
-              <h4>Download Resume</h4>
+              <h4>Email</h4>
               <p>
-                <a href="/assets/Resume.pdf" download="Prashant_Gupta_Resume.pdf" data-cursor="disable">
-                  Click here
+                <a href="mailto:prashantgtx@gmail.com" data-cursor="disable">
+                  prashantgtx@gmail.com
+                </a>
+              </p>
+              <h4>Mobile</h4>
+              <p>
+                <a href="tel:+919029140773" data-cursor="disable">
+                  +91 9029140773
                 </a>
               </p>
             </div>
