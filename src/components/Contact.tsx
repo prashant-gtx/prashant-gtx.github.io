@@ -1,6 +1,8 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./styles/Contact.css";
+import ScrambleText from "./ScrambleText";
+
 
 const Contact = () => {
   return (
@@ -10,7 +12,7 @@ const Contact = () => {
         
         <div className="contact-layout">
           <div className="contact-form-container">
-            <h4 className="form-heading">Have a <span>Question?</span></h4>
+            <h4 className="form-heading"><ScrambleText text="Have a Question?" /></h4>
             <form action="https://formspree.io/f/xojnabva" method="POST" className="contact-form">
               <div className="form-group">
                 <input type="text" className="form-control" name="name" placeholder="Your Name" required />
