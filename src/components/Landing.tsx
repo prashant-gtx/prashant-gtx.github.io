@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import ScrambleText from "./ScrambleText";
 import "./styles/Landing.css";
 
 const Landing = ({ children }: PropsWithChildren) => {
@@ -16,14 +17,7 @@ const Landing = ({ children }: PropsWithChildren) => {
           </div>
           <div className="landing-info">
             <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Data Engineer</div>
-              <div className="landing-h2-2">Data Analyst</div>
-              <div className="landing-h2-4">SIESGST'25</div>
-            </h2>
-            <h2>
-              <div className="landing-h2-info">Data Engineer</div>
-              <div className="landing-h2-info-1">Data Analyst</div>
-              <div className="landing-h2-info-3">SIESGST'25</div>
+              <ScrambleText texts={["Data Engineer", "Data Analyst", "SIESGST'25"]} />
             </h2>
           </div>
         </div>

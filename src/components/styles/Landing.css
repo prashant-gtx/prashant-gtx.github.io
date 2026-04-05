@@ -235,8 +235,8 @@
 }
 
 h2.landing-info-h2 {
-  color: #14b8a6;
-  font-size: 42px;
+  color: #ffffff;
+  font-size: 36px;
   width: 120%;
   margin: 0;
   font-family: "Geist", sans-serif;
@@ -251,7 +251,7 @@ h2.landing-info-h2 {
   top: 0;
 }
 
-.landing-info-h2::after {
+/* .landing-info-h2::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -262,7 +262,7 @@ h2.landing-info-h2 {
       rgba(0, 0, 0, 0) 110%);
   top: 0;
   left: 0;
-}
+} */
 
 @media screen and (min-width: 500px) {
   .landing-circle2 {
@@ -292,7 +292,7 @@ h2.landing-info-h2 {
   }
 
   h2.landing-info-h2 {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
 
@@ -320,7 +320,7 @@ h2.landing-info-h2 {
   }
 
   h2.landing-info-h2 {
-    font-size: 55px;
+    font-size: 48px;
   }
 }
 
@@ -394,6 +394,6 @@ h2.landing-info-h2 {
   }
 
   h2.landing-info-h2 {
-    font-size: 75px;
+    font-size: 65px;
   }
 }
