@@ -7,6 +7,7 @@
   width: 100%;
   margin: 10px auto;
   padding: 10px 0;
+  overflow: hidden;
 }
 
 .experience-section h2 {
@@ -38,7 +39,7 @@
   border-left: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 32px;
   padding: 50px;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -53,12 +54,58 @@
   height: 100%;
   background: radial-gradient(circle at top left, rgba(20, 184, 166, 0.1), transparent 40%);
   pointer-events: none;
+  z-index: 1;
+}
+
+/* Shimmer Animation */
+.experience-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0) 60%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  animation: experience-shimmer 6s infinite linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes experience-shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.experience-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  filter: blur(40px);
+}
+
+.experience-card:hover .experience-glow {
+  opacity: 1;
 }
 
 .experience-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px) scale(1.01);
   border-color: rgba(20, 184, 166, 0.4);
-  box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.7), 0 0 20px rgba(20, 184, 166, 0.1);
 }
 
 .experience-card-header {
@@ -67,6 +114,8 @@
   align-items: center;
   margin-bottom: 30px;
   gap: 24px;
+  position: relative;
+  z-index: 2;
 }
 
 .experience-logo {
@@ -80,6 +129,11 @@
   justify-content: center;
   padding: 6px 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.experience-card:hover .experience-logo {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .experience-logo img {
@@ -123,6 +177,11 @@
   font-weight: 500;
 }
 
+.experience-card-content {
+  position: relative;
+  z-index: 2;
+}
+
 .experience-card-content p {
   font-size: 20px;
   line-height: 1.6;
@@ -145,13 +204,15 @@
   border-radius: 8px;
   font-size: 14px;
   color: #d4d4d8;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .experience-tag:hover {
-  background: rgba(20, 184, 166, 0.1);
-  border-color: rgba(20, 184, 166, 0.3);
+  background: rgba(20, 184, 166, 0.15);
+  border-color: rgba(20, 184, 166, 0.5);
   color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(20, 184, 166, 0.2);
 }
 
 @media (max-width: 1024px) {
@@ -177,11 +238,11 @@
   }
   
   .experience-role-info h3 {
-    font-size: 32px;
+    font-size: 24px;
   }
   
   .experience-role-info h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .experience-card {
@@ -191,5 +252,9 @@
   
   .experience-card-content p {
     font-size: 18px;
+  }
+  
+  .experience-glow {
+    display: none;
   }
 }
