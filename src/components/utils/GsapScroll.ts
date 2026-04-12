@@ -1,5 +1,8 @@
 import * as THREE from "three";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
@@ -130,26 +133,51 @@ export function setCharTimeline(
       tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
     }
   }
+  ScrollTrigger.refresh();
 }
 
 export function setAllTimeline() {
+  // Experience Section Animation
+  const experienceTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".experience-section",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  experienceTimeline
+    .fromTo(
+      ".experience-card",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+    )
+    .fromTo(
+      ".experience-tag",
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, stagger: 0.1, duration: 0.4, ease: "back.out(1.7)" },
+      "-=0.4"
+    );
+
+  // Education (Career) Section Animation
   const careerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".career-section",
-      start: "top 30%",
+      start: "top 80%",
       end: "bottom 20%",
-      scrub: true,
+      scrub: 1,
       invalidateOnRefresh: true,
     },
   });
+
   careerTimeline
     .fromTo(
       ".career-timeline",
-      { maxHeight: "10%" },
-      { maxHeight: "100%", duration: 0.5 },
+      { maxHeight: "0%" },
+      { maxHeight: "100%", duration: 1, ease: "none" },
       0
     )
-
     .fromTo(
       ".career-timeline",
       { opacity: 0 },
@@ -159,7 +187,7 @@ export function setAllTimeline() {
     .fromTo(
       ".career-info-box",
       { opacity: 0 },
-      { opacity: 1, stagger: 0.1, duration: 0.5 },
+      { opacity: 1, stagger: 0.2, duration: 0.5 },
       0
     )
     .fromTo(
@@ -177,15 +205,9 @@ export function setAllTimeline() {
     careerTimeline.fromTo(
       ".career-section",
       { y: 0 },
-      { y: "20%", duration: 0.5, delay: 0.2 },
-      0
-    );
-  } else {
-    careerTimeline.fromTo(
-      ".career-section",
-      { y: 0 },
-      { y: 0, duration: 0.5, delay: 0.2 },
+      { y: "15%", duration: 0.5, delay: 0.1 },
       0
     );
   }
+  ScrollTrigger.refresh();
 }

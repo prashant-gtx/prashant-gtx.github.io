@@ -1,0 +1,195 @@
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+}
+
+.experience-section h2 {
+  font-size: 80px;
+  line-height: 85px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: 40px;
+}
+
+.experience-section h2>span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+.experience-card {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 32px;
+  padding: 50px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(20, 184, 166, 0.1), transparent 40%);
+  pointer-events: none;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(20, 184, 166, 0.4);
+  box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.7);
+}
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 24px;
+}
+
+.experience-logo {
+  flex-shrink: 0;
+  width: 150px;
+  height: 60px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experience-role-info {
+  flex-grow: 1;
+}
+
+.experience-role-info h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+.experience-role-info h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 6px 0 0 0;
+  color: #14b8a6;
+  opacity: 0.9;
+}
+
+.experience-date {
+  background: rgba(20, 184, 166, 0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  white-space: nowrap;
+}
+
+.experience-date span {
+  font-size: 14px;
+  color: #67e8f9;
+  font-weight: 500;
+}
+
+.experience-card-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #a1a1aa;
+  font-weight: 300;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.experience-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #d4d4d8;
+  transition: all 0.3s ease;
+}
+
+.experience-tag:hover {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(20, 184, 166, 0.3);
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .experience-section h2 {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .experience-card {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section h2 {
+    font-size: 45px;
+    line-height: 1.1;
+  }
+  
+  .experience-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .experience-role-info h3 {
+    font-size: 32px;
+  }
+  
+  .experience-role-info h4 {
+    font-size: 20px;
+  }
+  
+  .experience-card {
+    border-radius: 24px;
+    padding: 30px;
+  }
+  
+  .experience-card-content p {
+    font-size: 18px;
+  }
+}

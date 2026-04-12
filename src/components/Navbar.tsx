@@ -50,7 +50,7 @@ const Navbar = () => {
           className="navbar-connect"
           data-cursor="disable"
         >
-          Prashant Gupta
+          PRASHANT GUPTA
         </a>
         <ul>
           <li>
