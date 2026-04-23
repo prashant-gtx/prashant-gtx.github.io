@@ -1,6 +1,7 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
+import Education from "./Education";
 import Certifications from "./Certifications";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
@@ -9,7 +10,6 @@ import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
-import Experience from "./Experience";
 import GithubStats from "./GithubStats";
 import setSplitText from "./utils/splitText";
 
@@ -44,8 +44,8 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <Landing>{!isDesktopView && children}</Landing>
             <About />
             <WhatIDo />
-            <Experience />
             <Career />
+            <Education />
             <Work />
             <Certifications />
             {isDesktopView && (

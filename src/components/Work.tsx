@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward, MdArrowOutward } from "react-icons/md";
@@ -37,6 +37,7 @@ const projects = [
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const goToSlide = useCallback(
     (index: number) => {
@@ -60,6 +61,16 @@ const Work = () => {
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
+  useEffect(() => {
+    if (isHovered) return;
+
+    const timer = setInterval(() => {
+      goToNext();
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [goToNext, isHovered]);
+
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
@@ -67,7 +78,11 @@ const Work = () => {
           My <span>Projects</span>
         </h2>
 
-        <div className="carousel-wrapper">
+        <div 
+          className="carousel-wrapper"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
