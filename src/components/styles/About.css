@@ -19,13 +19,24 @@
   font-size: 80px;
   line-height: 85px;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Fix for WebKit background-clip with GSAP SplitText transforms */
+.about-me h2 {
   background: linear-gradient(0deg, #0d9488, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  margin-top: 0;
-  margin-bottom: 20px;
+}
+.about-me h2 div {
+  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .about-me h2 > span {
