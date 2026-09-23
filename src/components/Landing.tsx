@@ -17,7 +17,7 @@ const Landing = ({ children }: PropsWithChildren) => {
           </div>
           <div className="landing-info">
             <h2 className="landing-info-h2">
-              <ScrambleText texts={["Data Analyst", "Data Engineer", "SIESGST'25", "CDAC Mumbai"]} />
+              <ScrambleText texts={["Data Analyst", "Data Engineer", "Qualitykiosk Technologies", "SIESGST'25", "CDAC Mumbai"]} />
             </h2>
           </div>
         </div>
