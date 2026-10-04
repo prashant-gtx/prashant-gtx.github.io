@@ -1,4 +1,5 @@
 import "./styles/TechStack.css";
+import { TechItem } from "../types";
 
 const dataEngineering = [
   { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
@@ -27,7 +28,7 @@ const dataAnalysis = [
   { name: "n8n", icon: "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png" },
 ];
 
-const MarqueeTrack = ({ items, reverse }: { items: any[]; reverse?: boolean }) => {
+const MarqueeTrack = ({ items, reverse }: { items: TechItem[]; reverse?: boolean }) => {
   return (
     <div className={`marquee-track ${reverse ? "reverse" : ""}`}>
       <div className="marquee-items">

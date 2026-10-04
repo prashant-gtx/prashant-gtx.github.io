@@ -65,6 +65,19 @@
   align-items: center;
   gap: 60px;
   width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  box-sizing: border-box;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.carousel-content:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(94, 234, 212, 0.3);
 }
 
 .carousel-info {

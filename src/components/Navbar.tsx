@@ -18,6 +18,12 @@ const Navbar = () => {
       effects: true,
       autoResize: true,
       ignoreMobileResize: true,
+      onUpdate: (self) => {
+        const progressBar = document.querySelector(".scroll-progress-bar") as HTMLElement;
+        if (progressBar) {
+          progressBar.style.width = `${self.progress * 100}%`;
+        }
+      }
     });
 
     smoother.scrollTop(0);
