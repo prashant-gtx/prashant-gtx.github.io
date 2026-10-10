@@ -2,6 +2,10 @@ import "./styles/Certifications.css";
 
 const certifications = [
   {
+    title: "Agentic AI Foundations Associate",
+    issuer: "Oracle University",
+  },
+  {
     title: "AWS Academy Graduate – Data Engineering",
     issuer: "AWS Academy",
   },
@@ -32,10 +36,6 @@ const certifications = [
   {
     title: "Python (Basic)",
     issuer: "HackerRank",
-  },
-  {
-    title: "Python for Data Science",
-    issuer: "Sololearn",
   },
 ];
 
