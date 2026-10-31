@@ -142,11 +142,11 @@ const Career = () => {
             <div className="experience-glow" ref={glowRef}></div>
             <div className="experience-card-header">
               <div className="experience-logo">
-                <img src="/images/QualityKiosk.png" alt="QualityKiosk logo" />
+                <img src="/images/QKTech.svg" alt="QKTech logo" />
               </div>
               <div className="experience-role-info">
                 <h3>Trainee Engineer : Data Engineering & Validation (DSL-Solutions)</h3>
-                <h4>QualityKiosk Technologies · Full-time</h4>
+                <h4>QKTech · Full-time</h4>
               </div>
               <div className="experience-date">
                 <span>Mar 2026 - Present · {calculateDuration()}</span>
